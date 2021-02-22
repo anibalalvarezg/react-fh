@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import FristApp from './FirstApp';
 
-const greetings = <h1>Hello World!</h1>;
+import './index.css'; 
+
 const divRoot = document.querySelector('#root');
 
-ReactDOM.render(greetings, divRoot);
+ReactDOM.render(<FristApp greetings="Hello world!"/>, divRoot);
