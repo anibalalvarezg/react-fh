@@ -7,7 +7,7 @@ exports[`Tests CounterApp component should show CounterApp correctly 1`] = `
   </h1>
   <p>
      
-    0
+    100
      
   </p>
   <button
