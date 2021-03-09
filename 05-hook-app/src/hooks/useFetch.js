@@ -16,19 +16,16 @@ export const useFetch = ( url ) => {
         fetch(url)
             .then(response => response.json())
             .then(data => {
-
-                setTimeout(() => {
-                    if (isMounted.current) { 
-                        setstate({
-                            data,
-                            error: null,
-                            loading: false,
-                        });
-                    } else {
-                        console.log('Set state doesn\'t call');
-                    }
-                }, 4000);
-            })
+                if (isMounted.current) { 
+                    setstate({
+                        data,
+                        error: null,
+                        loading: false,
+                    });
+                } else {
+                    console.log('Set state doesn\'t call');
+                }
+            });
     }, [url]);
 
     return state;
